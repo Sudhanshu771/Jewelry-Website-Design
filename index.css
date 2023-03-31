@@ -78,8 +78,11 @@ article {
     flex: 1;
     padding: 1rem;
     border-radius: 20px;
-    border: 1px solid black;
     margin-right: 1rem;
+    background-color: whitesmoke;
+    transition: ease;
+    transition-duration: 0.5s;
+    box-shadow: 1px 1px 1px black;
 }
 
 .banner {
@@ -89,4 +92,20 @@ article {
     height: 500px;
     color: whitesmoke;
     text-shadow: none;
+}
+
+article:hover {
+    background-color: black;
+    color: whitesmoke;
+    animation: toggle 1s ease-in-out infinite alternate;
+}
+
+@keyframes toggle {
+    from {
+        transform: scale(1);
+
+    }
+    to {
+        transform: scale(1.03);
+    }
 }
